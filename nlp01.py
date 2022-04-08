@@ -27,8 +27,12 @@ def yiyuan(wen):
     global count,words,cishu,cishu2,cishu3,words_dir,words_dir2,words_dir3
     for wenzhang in wen:
         count+=len(wenzhang)
+        # 基于词
         for x in jieba.cut(wenzhang,cut_all=False):
             words.append(x)
+        # 基于字
+        # for x in range(len(wenzhang)):
+        #     words.append(wenzhang[x])
             cishu += 1
 
     for i in range(len(words)):
